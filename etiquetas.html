@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 5px solid black;
+            padding: 15px;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis primeros pasos</title>
@@ -19,5 +31,25 @@
                 <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtq9NHlsDkJ-MuW4pNX9YQ8WHKr1UTUZBqmiFdiRXaXDPNospXJUQLH4eLFm2MGwFeCR70NdUDl7HtOUkALT0UESBcuVMla5BP-N1IMq1u&s=10" alt="450px" height="450"></li>
             </ul>
     </ol>
+
+    <table border="1">
+        <tr>
+            <td>Dato 1</td>
+            <td rowspan="2">Dato 2</td>
+            <td>Dato 3</td>
+        </tr>
+        <tr>
+            <td>Dato 4</td>
+            <td>Dato 6</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Dato 7</td> <!-- Rowspan es para unir filas -->
+            <td colspan="2">Dato 8</td> <!-- Colspan es para unir columnas -->
+        </tr>
+        <tr>
+            <td colspan="2">Dato 11</td>
+        </tr>
+    </table>
+
 </body>
 </html>
