@@ -1,0 +1,11 @@
+        table {
+            margin: 0 auto;
+        }
+        td {
+            padding: 10px;
+        }
+        input{
+            border-radius: 5px;
+            background-color: antiquewhite;
+            font-family: 'Times New Roman', Times, serif;
+        }
