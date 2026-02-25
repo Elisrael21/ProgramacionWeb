@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más cosas del formulario</title>
+</head>
+<body>
+    <h1>Cosas a utilizar</h1>
+    <form class="row g-3">
+        <div class="col-md-6">
+            <h3>Checks button</h3>
+            <label title="">¿Qué deporte te gusta?</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Fútbol
+                </label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Basquetbol
+                </label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    Voleibol
+                </label>
+            </div>
+        <h3>Checks box</h3>
+            <label title="">Cuales comida te gusta?</label><BR>
+            <input type="checkbox" id="check1" name="check1" value="opcion1">
+            <label for="check1"> Pizza</label><br>
+            <input type="checkbox" id="check2" name="check2" value="opcion2">
+            <label for="check2"> Hamburguesa</label><br>
+            <input type="checkbox" id="check3" name="check3" value="opcion3">
+            <label for="check3"> Tacos</label><br>
+            <input type="checkbox" id="check4" name="check4" value="opcion4">
+            <label for="check4"> Sushi</label><br>
+        <h3>Selecciona tu estado</h3>
+        <select name="estados" id="estados">
+            <option value="CDMX">Ciudad de México</option>
+            <option value="EdoMex">Estado de México</option>
+            <option value="Jalisco">Jalisco</option>
+            <option value="NuevoLeon">Nuevo León</option>
+            <option value="Puebla">Puebla</option>
+            <option value="Veracruz">Veracruz</option>
+            <option value="Queretaro">Querétaro</option>
+            <option value="Quintana">Quintana Roo</option>
+        </select>
+        <h3>Selecciona tu color</h3>
+        <div>
+            <input type="color" id="head" name="head" value="#e66465" />
+            <label for="head">Color favorito</label>
+        </div>
+        <h3>Selecciona una fecha</h3>
+        <input type="date" id="fecha" name="fecha">
+        <h3>Selecciona un archivo</h3>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="archivo">Selecciona un archivo:</label>
+            <input type="file" id="archivo" name="archivo">
+            <input type="submit" value="Enviar">
+        </form>
+
+
+    </form>
+</body>
+</html>
