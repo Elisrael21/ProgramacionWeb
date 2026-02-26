@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    .contenedor {
+    .contenedor{
         display: flex;
         gap: 20px;
     }
     .mi-caja1{
+        align-items: left;
         width: 200px;
         padding: 20px;
-        border: 20px solid #d365a2;
-        margin: 10px;
+        border-collapse: collapse; /* Elimina el espacio entre bordes */
+        margin: 20px;
         background-color: lightblue;
         box-sizing: border-box; /* Mantiene el tamaño total en 200px */
     }
     .mi-caja2{
         width: 200px;
         padding: 20px;
-        border: 20px solid #d04343;
+        border: 10px solid #d04343;
         margin: 10px;
         background-color: rgb(35, 194, 93);
         box-sizing: border-box; /* Mantiene el tamaño total en 200px */
@@ -83,13 +84,9 @@
         </form>
         <br>
         <div class="contenedor">
-            <center>
             <div class="mi-caja1">Caja 1</div>
             <div class="mi-caja2">Caja 2</div>
-            </center>
         </div>
-
-
     </form>
 </body>
 </html>

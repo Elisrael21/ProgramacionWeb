@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Modelo de Caja</title>
+  <style>
+    .contendor {
+      width: 1000px;
+      height: 250px; /* altura opcional */
+      border: 2px solid black;
+      background-color: aquamarine;
+      display: flex; /* distribuye las cajas internas en fila */
+    }
+    .mi-caja1, .mi-caja2, .mi-caja3, .mi-caja4 {
+      width: 250px;
+      height: 62.5px;
+      border-collapse: collapse;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .mi-caja5, .mi-caja6, .mi-caja7, .mi-caja8 {
+      width: 250px;
+      height: 62.5px;
+      border: 1px solid rgb(80, 9, 93);
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplo de Caja con 4 Subcajas</h2>
+  <div class="contendor">
+    <div class="mi-caja1">Caja 1</div>
+    <div class="mi-caja2">Caja 2</div>
+    <div class="mi-caja3">Caja 3</div>
+    <div class="mi-caja4">Caja 4</div>
+    <div class="mi-caja5">Caja 5</div>
+    <div class="mi-caja6">Caja 6</div>
+    <div class="mi-caja7">Caja 7</div>
+    <div class="mi-caja8">Caja 8</div>
+
+  </div>
+</body>
+</html>
