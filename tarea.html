@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Página Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    /*.carousel-item img {
+        height: 400px;      /* Altura fija */
+       /* object-fit: cover;   Ajusta la imagen sin deformarla */
+    /*}*/
+    .card-uniforme {
+    height: 100%;
+    }
+
+    .card-uniforme img {
+        height: 250px;      /* Ajusta este valor a tu gusto */
+        object-fit: cover;  /* Recorta sin deformar */
+    }
+
+    .row {
+        align-items: stretch;
+    }
+
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Mi sitio web</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="index.html">Index</a>
+            </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Más páginas
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="confuncion.html">Confunción</a></li>
+                <li><a class="dropdown-item" href="credito.html">Credito</a></li>
+                <li><a class="dropdown-item" href="etiquetas.html">Etiquetas</a></li>
+                <li><a class="dropdown-item" href="plataformas.html">Plataformas</a></li>
+                <li><a class="dropdown-item" href="metodoCaja.html">Método Caja</a></li>
+                <li><a class="dropdown-item" href="formulario.html">Formulario</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="otrosEleFormu.html">Otros Elementos Formulario</a></li>
+            </ul>
+            </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+    </div>
+    </nav>
+
+<!-- ================= CAROUSEL ================= -->
+<div id="miCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://picsum.photos/1200/400?random=1" class="d-block w-100" alt="Imagen 1">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Primera Imagen</h5>
+                <p>En el baby shawer.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?random=2" class="d-block w-100" alt="Imagen 2">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Segunda Imagen</h5>
+                <p>Con la animadora.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://picsum.photos/1200/400?random=3" class="d-block w-100" alt="Imagen 3">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Tercera Imagen</h5>
+                <p>Antes del baby shower.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#miCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#miCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<!-- ================= TARJETAS ================= -->
+<div class="container my-5">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="F1.2.jpeg" class="card-img-top" alt="Card 1">
+                <div class="card-body">
+                    <h5 class="card-title">Tarjeta 1</h5>
+                    <p class="card-text">En el baby shawer.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="F1.3.jpeg" class="card-img-top" alt="Card 2">
+                <div class="card-body">
+                    <h5 class="card-title">Tarjeta 2</h5>
+                    <p class="card-text">Con la capilla.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="F1.jpeg" class="card-img-top" alt="Card 3">
+                <div class="card-body">
+                    <h5 class="card-title">Tarjeta 3</h5>
+                    <p class="card-text">Antes del baby shower.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="F1.2.jpeg" class="card-img-top" alt="Carta 1">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="F1.3.jpeg" class="card-img-top" alt="Carta 2">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 1 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="F1.jpeg" class="card-img-top" alt="Carta 3">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
