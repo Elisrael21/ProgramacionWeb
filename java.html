@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javas Escris</title>
+    <link rel="icon" type="image/x-icon" href="https://wildcardcorp.com/image-repository/javascript-icon.png/@@images/image.png">
+    <title>Yavas Escris</title>
+    <style>
+        .Seleccionado{
+            border-color: red;
+        }
+    </style>
 </head>
 <body>
     
@@ -12,10 +18,36 @@
         function alerta(){
         alert(document.getElementById('txtnombre').value);
         }
+        function cambiarColor(){
+            document.getElementById('txtnombre').className="Seleccionado";
+        }
+        function sumaresta(operacion){
+        numeroA=parseInt(document.getElementById('txtnumeroA').value);
+        numeroB=parseInt(document.getElementById('txtnumeroB').value);
+        if(operacion=="+"){
+            resultado=numeroA + numeroB;
+        }
+        else{
+            resultado=numeroA - numeroB;
+        }
+        document.getElementById('txtresultado').value=resultado;
+        }
+        /*function restar(){
+            numeroA=parseInt(document.getElementById('txtnumeroA').value);
+            numeroB=parseInt(document.getElementById('txtnumeroB').value);
+            resultado=numeroA - numeroB;
+            document.getElementById('txtresultado').value=resultado;
+        }
        /* var nombre = prompt("¿Cuál es tu nombre?");
         document.write("Hola " + nombre + ", bienvenido a mi página"); */
     </script>
-<input type="text" id="txtnombre">
-<input type="button" onclick="alert(document.getElementById('txtnombre').value)">
+<input type="text" id="txtnombre" onclick="cambiarColor()" placeholder="Escribe algo">
+<input type="button" onclick="alerta()" value="Enter">
+
+<br>Número A:<input type="number" name="NumeroA" id="txtnumeroA" placeholder="Número A">
+<br><input type="button" onclick="sumaresta(this.value)" value="+">
+<br><input type="button" onclick="sumaresta(this.value)" value="-">
+<br>Número B:<input type="number" name="NumeroB" id="txtnumeroB" placeholder="Número B">
+<br>Resultado:<input type="text" id="txtresultado">
 </body>
 </html>
