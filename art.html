@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/136/136525.png">
+    <title>Catálogo de Salseros</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f9; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        
+        .menu { margin-bottom: 20px; text-align: center; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        select { padding: 10px; font-size: 16px; border-radius: 5px; cursor: pointer; border: 1px solid #ccc; width: 60%; }
+
+        .card { display: flex; gap: 20px; align-items: center; padding-top: 20px; display: none; }
+        .card-left img { width: 300px; height: 350px; object-fit: cover; border-radius: 10px; box-shadow: 2px 2px 15px rgba(0,0,0,0.2); }
+        
+        .card-right { flex: 1; }
+        .card-right h2 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #007bff; display: inline-block; }
+        .card-right p { margin: 10px 0; color: #444; font-size: 1.1em; }
+        .songs { font-style: italic; color: #e67e22; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">
+        <h2>Grandes Exponentes de la Salsa</h2>
+        <label for="artistSelector">Selecciona un artista: </label>
+        <select id="artistSelector" onchange="mostrarArtista()">
+            <option value="">-- Selecciona un cantante --</option>
+        </select>
+    </div>
+
+    <div id="artistCard" class="card">
+        <div class="card-left">
+            <img id="artistImg" src="" alt="Foto del artista">
+        </div>
+        <div class="card-right">
+            <h2 id="artistName"></h2>
+            <p><strong>Edad:</strong> <span id="artistAge"></span> años</p>
+            <p><strong>Origen:</strong> <span id="artistOrigin"></span></p>
+            <p><strong>Canciones Populares:</strong></p>
+            <p id="artistSongs" class="songs"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JSON Corregido (Se agregó la coma faltante entre Frankie y Jerry)
+    const dataJSON = `{
+        "artistas": [
+            {
+                "nombre": "Rubén Blades",
+                "edad": 77,
+                "origen": "Panamá, Panamá",
+                "canciones": ["Pedro Navajas", "Amor y Control", "Decisiones"],
+                "foto": "https://4f03t4b16s.ucarecd.net/da6c0e64-4946-4a10-829e-ba0ed755f34d/-/crop/1190x1000/5,0/-/resize/1035x870/"
+            },
+            {
+                "nombre": "Willie Colón",
+                "edad": 75,
+                "origen": "South Bronx, Nueva York",
+                "canciones": ["El gran varón", "Gitana", "Idilio"],
+                "foto": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Willie_Col%C3%B3n_on_Trumpet.jpg"
+            },
+            {
+                "nombre": "Frankie Ruiz",
+                "edad": 40,
+                "origen": "Paterson, Nueva Jersey",
+                "canciones": ["Tú con él", "Desnúdate mujer", "La rueda"],
+                "foto": "https://showbuzzrd.com/wp-content/uploads/2022/02/Frankie-Ruiz.jpg"
+            },
+            {
+                "nombre": "Jerry Rivera",
+                "edad": 52,
+                "origen": "Humacao, Puerto Rico",
+                "canciones": ["Mi libertad", "Amores como el nuestro", "Cara de niño"],
+                "foto": "https://bloximages.newyork1.vip.townnews.com/elvocero.com/content/tncms/assets/v3/editorial/5/7b/57b25c55-f102-490e-94c2-5fa6571ce4db/68dff7e938809.image.jpg?resize=500%2C500"
+            },
+            {
+                "nombre": "Gilberto Santa Rosa",
+                "edad": 63,
+                "origen": " Santurce, Puerto Rico",
+                "canciones": ["Que alguien me diga", "Conciencia", "Conteo regresivo"],
+                "foto": "https://ca-times.brightspotcdn.com/dims4/default/1d50536/2147483647/strip/true/crop/3648x5472+0+0/resize/1200x1800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0d%2F7c%2F056286fd49aa8ad1ca8ddf1ca686%2F623a2996.JPG"
+            }
+        ]
+    }`;
+
+    const info = JSON.parse(dataJSON);
+    const selector = document.getElementById("artistSelector");
+
+    // --- NUEVO: Función para llenar el menú automáticamente ---
+    info.artistas.forEach((artista, index) => {
+        let opcion = document.createElement("option");
+        opcion.value = index;
+        opcion.text = artista.nombre;
+        selector.add(opcion);
+    });
+
+    function mostrarArtista() {
+        const index = selector.value;
+        const card = document.getElementById("artistCard");
+
+        if (index !== "") {
+            const artista = info.artistas[index];
+
+            document.getElementById("artistName").innerText = artista.nombre;
+            document.getElementById("artistAge").innerText = artista.edad;
+            document.getElementById("artistOrigin").innerText = artista.origen;
+            document.getElementById("artistSongs").innerText = artista.canciones.join(", ");
+            document.getElementById("artistImg").src = artista.foto;
+
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
